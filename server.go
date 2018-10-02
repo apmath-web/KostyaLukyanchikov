@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/apmath-web/KostyaLukyanchikov/tree/dev/handlers"
 	"fmt"
 	"net/http"
+	"https://github.com/apmath-web/KostyaLukyanchikov/tree/dev/handlers"
 )
 
 func rootpage(w http.ResponseWriter, r *http.Request)  {
