@@ -2,28 +2,16 @@ package main
 
 import (
 	"fmt"
+	"github.com/KostyaLukyanchikov/server/handlers"
 	"net/http"
-	"https://github.com/apmath-web/KostyaLukyanchikov/tree/dev/handlers"
 )
 
-func rootpage(w http.ResponseWriter, r *http.Request)  {
-	fmt.Fprint(w, "Hello World!")
-}
-
-//func date(w http.ResponseWriter, r *http.Request) {
-//	http.HandleFunc("/date",
-//	fmt.Fprintln(w, "Date:", time.Now().UTC().Format("2006-01-02T15:04:05-0700"))
-//})
 func main()  {
 
-	//http.HandleFunc("/wait",
-	//	func(w http.ResponseWriter, r *http.Request) {
-	//		fmt.Fprintln(w, "Date:", time.Now().UTC().Format("2006-01-02T15:04:05-0700"))
-	//	})
 
-
-	http.HandleFunc("/", rootpage)
+	http.HandleFunc("/", handlers.Root)
 	http.HandleFunc("/date", handlers.Date)
+	http.HandleFunc("/date", handlers.Delay)
 
 
 	fmt.Println("Starting server at :8080")
