@@ -11,7 +11,7 @@ func main()  {
 
 	http.HandleFunc("/", handlers.Root)
 	http.HandleFunc("/date", handlers.Date)
-	http.HandleFunc("/date", handlers.Delay)
+	http.HandleFunc("/wait", handlers.Delay)
 
 
 	fmt.Println("Starting server at :8080")
